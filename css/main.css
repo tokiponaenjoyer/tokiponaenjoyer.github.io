@@ -1,0 +1,124 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My CSS */
+.scrollh {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.scrollv {
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+	color: white;
+}
+#title {
+  height: auto;
+  width: auto;
+  max-height: 90%;        /* relative to parent navbar height */
+  max-width: 200px;       /* never wider than 200px on desktop */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #navbar {
+    padding: 0 5%;
+  }
+  .nav-links {
+    gap: 16px;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  #title {
+    max-height: 80%;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  #navbar {
+    padding: 0 3%;
+    height: 40px;           /* fixed navbar height on mobile */
+  }
+  #title {
+    max-height: 70%;        /* 70% of 40px = 28px */
+    max-width: 40vw;        /* ensure it doesn't take too much width */
+    height: auto;           /* important: let height scale with width */
+    width: auto;
+  }
+  .nav-links {
+    gap: 10px;
+    flex-wrap: nowrap;      /* keep links on one line */
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar {
+    height: 36px;
+  }
+  .nav-links {
+    gap: 6px;
+  }
+  .nav-links a {
+    font-size: 0.65rem;
+  }
+  #title {
+    max-height: 65%;
+    max-width: 35vw;
+  }
+}

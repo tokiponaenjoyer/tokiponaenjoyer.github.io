@@ -1,0 +1,33 @@
+
+body {
+    background-image: url(../assets/images/stone.png);
+}
+
+#navbar {
+    background-image: url(../assets/images/dirt.png);
+    background-repeat: repeat-x;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+#title {
+    height: 90%;
+    width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  z-index: 1;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 0;
+  transition: opacity 0.2s;
+}
