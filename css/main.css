@@ -1,6 +1,8 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
+
+   css reset
 */
 
 html, body, div, span, applet, object, iframe,
@@ -47,78 +49,75 @@ table {
 	border-spacing: 0;
 }
 
-/* My CSS */
-.scrollh {
-    overflow-x: auto;
-    white-space: nowrap;
+/* Utility classes */
+.center {
+  text-align: center;
 }
 
-.scrollv {
-    overflow-y: auto;
-    white-space: nowrap;
-}
-
+/* My own reuseable css */
 body {
-    font-family: 'Inter', Arial, sans-serif;
+  font-family: "minecraft", Arial, sans-serif;
 	color: white;
-}
-#title {
-  height: auto;
-  width: auto;
-  max-height: 90%;        /* relative to parent navbar height */
-  max-width: 200px;       /* never wider than 200px on desktop */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #navbar {
-    padding: 0 5%;
-  }
-  .nav-links {
-    gap: 16px;
-  }
-  .nav-links a {
-    font-size: 0.9rem;
-  }
-  #title {
-    max-height: 80%;
-    max-width: 150px;
-  }
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+  "nav"
+  "main";
+  line-height: 1.6;
 }
 
-@media (max-width: 600px) {
-  #navbar {
-    padding: 0 3%;
-    height: 40px;           /* fixed navbar height on mobile */
-  }
-  #title {
-    max-height: 70%;        /* 70% of 40px = 28px */
-    max-width: 40vw;        /* ensure it doesn't take too much width */
-    height: auto;           /* important: let height scale with width */
-    width: auto;
-  }
-  .nav-links {
-    gap: 10px;
-    flex-wrap: nowrap;      /* keep links on one line */
-  }
-  .nav-links a {
-    font-size: 0.75rem;
-    white-space: nowrap;
-  }
+::selection {
+    background: #80808080;
+    color: white;
 }
 
-@media (max-width: 480px) {
-  #navbar {
-    height: 36px;
-  }
-  .nav-links {
-    gap: 6px;
-  }
-  .nav-links a {
-    font-size: 0.65rem;
-  }
-  #title {
-    max-height: 65%;
-    max-width: 35vw;
-  }
+nav {
+  grid-area: "nav";
+}
+
+main {
+  grid-area: "main";
+}
+
+h1 {
+  font-size: 150%;
+}
+
+.block {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 25px 5%;
+  padding: 15px 25px;
+  border-radius: 16px;
+}
+
+.grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  justify-content: center;
+}
+
+.scrollable {
+  display: inline;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.block * {
+  color: white;
+  text-decoration: none;
+}
+
+.block a:hover {
+  font-style: italic;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.description {
+  grid-column: 1 / -1;
+  width: 100%;
 }

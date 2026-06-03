@@ -3,7 +3,7 @@ body {
     background-image: url(../assets/images/stone.png);
 }
 
-#navbar {
+nav {
     background-image: url(../assets/images/dirt.png);
     background-repeat: repeat-x;
     height: 48px;
@@ -14,8 +14,7 @@ body {
 }
 
 #title {
-    height: 90%;
-    width: auto;
+  height: 75%;
 }
 
 .nav-links {
@@ -27,7 +26,6 @@ body {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 700;
   padding: 8px 0;
   transition: opacity 0.2s;
 }

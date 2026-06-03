@@ -9,18 +9,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="assets/images/minecraft_title.png">
+    <link rel="preload" as="image" href="assets/images/dirt.png">
+    <link rel="preload" as="image" href="assets/images/stone.png">
     <!-- Load Inter font-->
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/minecraft.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-    <nav id="navbar">
-        <img id="title" src="assets/images/minecraft_title.png" alt="My username stylized like the minecraft title">
+    <nav>
+        <img id="title" fetchpriority="high" src="assets/images/minecraft_title.png" alt="My username stylized like the minecraft title">
         <div class="nav-links">
-            <a href="html/fun.html">Fun</a>
+            <a href="html/games.html">Games</a>
             <a href="#">Test</a>
             <a href="#">Test</a>
             <a href="#">Test</a>
@@ -28,6 +33,13 @@
             <a href="#">Test</a>
         </div>
     </nav>
-
+    <main>
+        <div class="block center">
+            <h1>TokiPonaEnjoyer's Website</h1>
+        </div>
+        <div class="block">
+            <p>Hello, and welcome to my website! This is where I put my portfolio and any content I want to share with others. If you can't tell already from the theming of this website, I really like Minecraft, and so I themed my website after it. Above in the navbar are various sections organizing the content, so feel free to explore!</p>
+        </div>
+    </main>
 </body>
 </html>
