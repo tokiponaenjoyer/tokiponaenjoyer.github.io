@@ -1,3 +1,5 @@
+@import url(font.css);
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,9 +56,8 @@ table {
   text-align: center;
 }
 
-/* My own reuseable css */
 body {
-  font-family: "minecraft", Arial, sans-serif;
+  font-family: "Minecraftia", Arial, sans-serif;
 	color: white;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -86,11 +87,11 @@ body {
 }
 
 nav {
-  grid-area: "nav";
+  grid-area: nav;
 }
 
 main {
-  grid-area: "main";
+  grid-area: main;
 }
 
 h1 {
@@ -138,4 +139,58 @@ h1 {
 .description {
   grid-column: 1 / -1;
   width: 100%;
+}
+
+
+body {
+    background-image: url(../assets/images/stone.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+nav {
+    background-image: url(../assets/images/dirt.png);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+#title {
+  height: 75%;
+}
+
+#nav-links {
+  display: flex;
+  gap: 24px;
+  z-index: 1;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: opacity 0.2s;
+}
+
+@media (max-width: 1000px) {
+  nav > img#title {
+    display: none;
+  }
+  nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  #nav-links a {
+    font-size: 12px;
+  }
+  #nav-links {
+    gap: 12px;
+  }
 }
