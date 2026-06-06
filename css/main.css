@@ -130,6 +130,12 @@ h1 {
   font-style: italic;
 }
 
+.block .center.description {
+  display: block;
+  text-align: center; 
+  margin-bottom: 1rem;
+}
+
 .info {
   display: flex;
   flex-direction: column;

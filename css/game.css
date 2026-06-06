@@ -1,0 +1,10 @@
+
+@import url(main.css);
+
+.block iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; 
+  border: none;
+  display: block;
+}
